@@ -19,7 +19,13 @@ public class QueueList<AnyType> {
     public AnyType dequeue() {
         if (isEmpty()) {
             //throw new UnderflowException("QueueList dequeue");
-            System.out.println("Cola vacia");
+            try {
+                throw new Exception("QueueList getFront");
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            
         }
         AnyType returnValue = front.data;
         front = front.next;
@@ -33,7 +39,6 @@ public class QueueList<AnyType> {
             try {
                 throw new Exception("QueueList getFront");
             } catch (Exception e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         return front.data;
