@@ -4,10 +4,8 @@ public class OrdenamientoCola {
     public static void main(String[] args) {
         QueueList<Integer> cola = new QueueList<Integer>();
         Scanner console = new Scanner(System.in);
-        int contador = 0;
         char seguir = ' ';
         do {
-            contador++;
             System.out.println("Ingrese un número para agregar a la cola:");
             int numero = console.nextInt();
             cola.enqueue(numero);
@@ -54,4 +52,9 @@ public class OrdenamientoCola {
 }
 
 
-
+/*
+ * extends Comparable<T>: Esto impone una restricción en el tipo genérico T. 
+ * Indica que T debe ser un tipo que implementa la interfaz Comparable<T>. 
+ * La interfaz Comparable<T> es una interfaz genérica que se utiliza para objetos que pueden ser comparados entre sí, por ejemplo,
+ *  números enteros, cadenas de texto, etc.
+ */

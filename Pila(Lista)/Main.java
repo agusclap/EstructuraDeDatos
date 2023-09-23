@@ -63,7 +63,7 @@ public class Main {
             System.out.println("Quiere continuar con el programa ? y/n");
             seguir = console.next().charAt(0);
         }while(seguir == 'Y' || seguir == 'y');
-        
+        console.close();
     }
     
 }

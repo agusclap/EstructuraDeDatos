@@ -16,6 +16,7 @@ public class palabra {
             System.out.println("Quiere continuar con el programa ? y/n");
             seguir = console.next().charAt(0);
         }while(seguir == 'y' || seguir == 'Y');
+        console.close();
         System.out.println("Imprimiendo...");
         while(pilaString.isEmpty() == false){
             System.out.println(pilaString.pop());
