@@ -38,12 +38,13 @@ public class Cola<AnyType> {
     }
 
     public AnyType dequeue(){
-        if( isEmpty())
+        if( isEmpty()){
             try {
                 throw new Exception("ArrayQueue dequeue");
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
         currentSize--;
         AnyType returnValue = theArray [ front ];
         front = increment(front);
