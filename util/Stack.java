@@ -8,7 +8,7 @@ public class Stack<T> {
     public Stack(Integer size) {
         this.size = size;
         this.index = 0;
-        this.array = (T[]) new Object[size];
+        this.array = (T[]) new Object[size]; // advertencia debido al casteo de un array generico, no asegura que todos los objetos sean del mismo tipo a la hora de la compilacion
     }
 
     public void push(T item) {

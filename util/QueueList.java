@@ -30,7 +30,12 @@ public class QueueList<AnyType> {
     public AnyType getFront() {
         if (isEmpty())
             System.out.println("ERROR");
-            //throw new UnderflowException("QueueList getFront");
+            try {
+                throw new Exception("QueueList getFront");
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         return front.data;
     }
 
