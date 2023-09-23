@@ -1,3 +1,5 @@
+
+
 public class Nodo<AnyType> {
     AnyType data;
     Nodo<AnyType> next;
@@ -7,3 +9,4 @@ public class Nodo<AnyType> {
     this.next = null;
   }
 }
+

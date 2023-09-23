@@ -1,4 +1,7 @@
+
 import java.util.Scanner;
+
+
 
 public class OrdenamientoCola {
     public static void main(String[] args) {

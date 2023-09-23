@@ -16,9 +16,13 @@ public class Stack<T> {
         this.index++;
     }
 
-    public T pop() throws Exception {
+    public T pop()  {
         if (isEmpty()) {
-            throw new Exception("pila vacia");
+            try {
+                throw new Exception("pila vacia");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         T value = this.array[this.index - 1];
         this.index--;

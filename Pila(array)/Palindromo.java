@@ -2,25 +2,26 @@ import java.util.Scanner;
 
 public class Palindromo {
 
-    public static boolean EsPalindromo(String palabra, int longitud) {
-        for (int i = 0; i < longitud / 2; i++) {
-            if (palabra.charAt(i) != palabra.charAt(longitud - 1 - i)) {
-                return false; // No es un palíndromo
-            }
-        }
-        return true; // Es un palíndromo
-    }
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Ingrese una palabra");
         String a = console.next();
+        Stack<Character> pila = new Stack<Character>(a.length());
         console.close();
         int p = a.length();
-        if (EsPalindromo(a, p))
-            System.out.println("Es palíndromo");
+        boolean y = false;
+        for(int x=0;x<p;x++)
+            pila.push(a.charAt(x));
+        for(int i=0;i<p;){
+            if(!pila.pop().equals(a.charAt(i)))
+                y = true;
+                break;
+            }
+        if(y)
+            System.out.println("No es palindromo");
         else
-            System.out.println("No es palíndromo");
+            System.out.println("Si es palindromo");
     }
 }
 
