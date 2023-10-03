@@ -29,7 +29,7 @@ public class MetodosOrdenamiento {
                         case 1 :
                         {
                             int [] array = new int[size];
-                            insertionSort(array);
+                            //insertionSort(array);
                             break;
                         }
                         case 2:
