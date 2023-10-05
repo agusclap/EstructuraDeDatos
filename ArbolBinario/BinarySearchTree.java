@@ -1,4 +1,4 @@
-package ArbolBinario;
+package ArbolBinario1;
 
 import javax.management.InstanceNotFoundException;
 
@@ -54,6 +54,10 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
         }
         return null; // Not found
     }
+    
+    public void printInOrder(){
+        if( root != null) root.printInOrder();
+    }
 
     protected BinaryNode<AnyType> findMin( BinaryNode<AnyType> t )
     {
@@ -80,13 +84,9 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
             t.left = insert(x, t.left);
         else if( x.compareTo(t.element) > 0)
             t.right = insert ( x, t.right);
-        else
-            try {
-                throw new Exception (x.toString());
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } // Duplicate
+        /*else
+                throw new IllegalArgumentException("Error");
+        */
         
         return t;
     }
