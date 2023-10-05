@@ -1,4 +1,4 @@
-package ArbolBinario1;
+package ArbolBinario;
 
 import javax.management.InstanceNotFoundException;
 
