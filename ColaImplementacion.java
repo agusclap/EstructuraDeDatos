@@ -1,12 +1,7 @@
-/*
- * 
- * Cola de Números
-a. Implementa una cola que almacene números enteros. Crea un
-programa que solicite al usuario ingresar números y los encole. Luego,
-desencola y suma todos los números.
- */
+
 
  import java.util.Scanner;
+
 
 public class ColaImplementacion {
     public static void main(String[] args) {

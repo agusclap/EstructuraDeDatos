@@ -84,10 +84,8 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
             t.left = insert(x, t.left);
         else if( x.compareTo(t.element) > 0)
             t.right = insert ( x, t.right);
-        /*else
-                throw new IllegalArgumentException("Error");
-        */
-        
+        else if(x.compareTo(t.element) == 0)
+            t.left = insert(x,t.left);
         return t;
     }
 

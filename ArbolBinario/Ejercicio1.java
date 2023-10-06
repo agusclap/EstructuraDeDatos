@@ -2,7 +2,7 @@ package ArbolBinario;
 
 import java.util.Random;
 
-public class ArbolBinario {
+public class Ejercicio1 {
 
     
     public static void main(String[] args) {
@@ -13,11 +13,7 @@ public class ArbolBinario {
             int n = random.nextInt(25);
             arbol.insert(n);
         }
-        
-        
-        arbol.printInOrder();
-        
-        
+        arbol.printInOrder();  // Imprime los numeros de forma ordenada (Ejercicio 2)
     }
     
 }
