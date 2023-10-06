@@ -59,6 +59,14 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
         if( root != null) root.printInOrder();
     }
 
+    public void printPreOrder(){
+        if(root != null) root.printPreOrder();
+    }
+
+    public void printPostOrder(){
+        if(root != null) root.printPostOrder();
+    }
+
     protected BinaryNode<AnyType> findMin( BinaryNode<AnyType> t )
     {
         if ( t != null)
@@ -84,8 +92,8 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
             t.left = insert(x, t.left);
         else if( x.compareTo(t.element) > 0)
             t.right = insert ( x, t.right);
-        else if(x.compareTo(t.element) == 0)
-            t.left = insert(x,t.left);
+        else if(x.compareTo(t.element) == 0) // Modificacion para que imprima valores repetidos
+            t.left = insert(x,t.left);       //  Se puede insertar tanto en el sub-arbol izquierdo como en el derecho
         return t;
     }
 
@@ -132,4 +140,27 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
         return t;
     }
 
-}
+    public int height(){
+        return BinaryNode.height(root);
+    }
+
+    public AnyType getRoot(){
+        return root.element;
+    }
+
+    public int size(){
+        return BinaryNode.size( root );
+    }
+
+    public void MakeEmpty(){
+        root = null;
+    }
+    
+    // the only thing that it is missing in this code tree is the function merge()
+    // The function merge() is in the file BinaryTree, all the other functions are in this file
+    
+  
+    
+ }
+
+

@@ -13,7 +13,10 @@ public class Ejercicio1 {
             int n = random.nextInt(25);
             arbol.insert(n);
         }
-        arbol.printInOrder();  // Imprime los numeros de forma ordenada (Ejercicio 2)
+        System.out.println(arbol.getRoot());
+        arbol.printPreOrder();  // Imprime los numeros de forma ordenada (Ejercicio 2)
+        System.out.println(arbol.height());
+        System.out.println(arbol.size());
     }
     
 }
