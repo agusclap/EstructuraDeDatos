@@ -13,8 +13,8 @@ public class Exercise1 {
             int n = random.nextInt(25);
             tree.insert(n);
         }
-        System.out.println(tree.getRoot()); // Return tree's root
-        tree.printPreOrder();  // print the numbers in ordered form ( Exercise 2 )
+        //System.out.println(tree.getRoot()); // Return tree's root
+        tree.printInOrder();  // print the numbers in ordered form ( Exercise 2 )
         System.out.println(tree.height()); // Height ( levels )
         System.out.println(tree.size()); // tree's size ( amount of nodes entered )
     }
