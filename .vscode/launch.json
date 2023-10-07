@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Practice6",
+      "request": "launch",
+      "mainClass": "ArbolBinario.Practice6",
+      "projectName": "Practico_e01e6e41"
+    },
+    {
+      "type": "java",
       "name": "Ejercicio1",
       "request": "launch",
       "mainClass": "ArbolBinario.Ejercicio1",

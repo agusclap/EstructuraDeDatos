@@ -58,9 +58,14 @@ public class BinarySearchTree<AnyType extends Comparable <? super AnyType>>
     public void printInOrder(){
         if( root != null) root.printInOrder();
     }
+    
 
     public void printPreOrder(){
         if(root != null) root.printPreOrder();
+    }
+
+    public void printPreOrder(int n){
+        if(root != null) root.printPreOrder(n);
     }
 
     public void printPostOrder(){

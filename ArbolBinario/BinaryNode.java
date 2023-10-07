@@ -70,11 +70,40 @@ public class BinaryNode<AnyType> {
     }
     public void printPreOrder(){
         System.out.println(element); // Node
-        if(left != null )
+        if(left != null ){
             left.printPreOrder();  // left
-        if( right != null )
+        }
+        if( right != null ){
             right.printPreOrder();  // Right
+       }
     }
+
+    
+
+    public void printPreOrder(int depth) {
+        // Imprime espacios en blanco para representar la profundidad
+        for (int i = 0; i < depth; i++) {
+            System.out.print("  ");
+        }
+    
+        // Imprime el valor del nodo
+        System.out.print("|");
+        System.out.println("-"+element);
+    
+        // Llama recursivamente a printPreOrder en los nodos hijos
+        if (left != null) {
+            left.printPreOrder(depth + 1);
+        }
+        if (right != null) {
+            right.printPreOrder(depth + 1);
+        }
+    }
+    
+    // Método de inicio para imprimir el árbol en forma de preorden
+    public void printTree() {
+        printPreOrder(0);
+    }
+    
     //Print tree rooted at current node using postorder traversal
     public void printPostOrder(){
         if(left != null) // left
@@ -85,10 +114,17 @@ public class BinaryNode<AnyType> {
     }
     
     public void printInOrder(){
-        if( left != null) // left
+        if( left != null){ // left
             left.printInOrder();
+            System.out.print("_");
+            
+        }
         System.out.println(element); // Node
-        if( right != null)
+        System.out.print("|");
+        //System.out.print("_");
+        if( right != null){
             right.printInOrder(); // Right
+            System.out.print("_");
+        } 
     }
 }
