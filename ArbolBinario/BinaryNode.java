@@ -9,10 +9,12 @@ public class BinaryNode<AnyType> {
     BinaryNode<AnyType> right;
     
     
+    
     public BinaryNode (AnyType element){
         this.element = element;
         left = right = null;
     }
+
 
     public BinaryNode(AnyType theElement, BinaryNode<AnyType> lt, BinaryNode<AnyType> rt){
        element = theElement;
@@ -21,38 +23,54 @@ public class BinaryNode<AnyType> {
         
     }
     
+
     public AnyType getElement(){
         return element;
     }
     
+
     public BinaryNode<AnyType> getLeft(){
         return left;
     }
     
+
     public BinaryNode<AnyType> getRight(){
         return right;
     }
+
+
     public void setElement(AnyType x){
         element = x;
     }
+
+
     public void setLeft(BinaryNode<AnyType> t){
         left = t;
     }
+
+
     public void setRight(BinaryNode<AnyType> r){
         right = r;
     }
+
+
+
     public static <AnyType> int size(BinaryNode<AnyType> t){
         if( t==null )
             return 0;
         else
             return 1 + size(t.left) + size(t.right);
     }
+
+
     public static <AnyType> int height (BinaryNode<AnyType> t){
         if( t == null)
             return -1;
         else
             return 1 + Math.max(height(t.left),height(t.right));
     }
+
+
     public BinaryNode<AnyType> duplicate(){
         BinaryNode<AnyType> root = new BinaryNode<AnyType> ( element, null, null);
         
@@ -62,6 +80,8 @@ public class BinaryNode<AnyType> {
             root.right = right.duplicate(); // Duplicate; aatach
         return root; // Return resulting tree
     }
+
+
     public void printPreOrder(){
         System.out.println(element); // Node
         if(left != null ){
