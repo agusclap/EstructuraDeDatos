@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ArbolBinario;
 
-/**
- *
- * @author alumno
- */
+
 public class BinaryNode<AnyType> {
+    int bal; // para almacenar el valor del equilibro del nodo
     AnyType element;
     BinaryNode<AnyType> left;
     BinaryNode<AnyType> right;
@@ -81,16 +75,16 @@ public class BinaryNode<AnyType> {
     
 
     public void printPreOrder(int depth) {
-        // Imprime espacios en blanco para representar la profundidad
+        // print spaces for the depth
         for (int i = 0; i < depth; i++) {
             System.out.print("  ");
         }
     
-        // Imprime el valor del nodo
+        // print the node's value
         System.out.print("|");
         System.out.println("-"+element);
     
-        // Llama recursivamente a printPreOrder en los nodos hijos
+        // Recursivity for the others childs
         if (left != null) {
             left.printPreOrder(depth + 1);
         }
@@ -99,10 +93,6 @@ public class BinaryNode<AnyType> {
         }
     }
     
-    // Método de inicio para imprimir el árbol en forma de preorden
-    public void printTree() {
-        printPreOrder(0);
-    }
     
     //Print tree rooted at current node using postorder traversal
     public void printPostOrder(){
@@ -126,5 +116,26 @@ public class BinaryNode<AnyType> {
             right.printInOrder(); // Right
             System.out.print("_");
         } 
+    }
+
+    /*
+     * Rotate binary tree node with left child
+     * For AVL trees, this is a single rotation for case 1.
+     */
+    public BinaryNode<AnyType> rotateLeftChild ( BinaryNode<AnyType> k2 ){
+        BinaryNode<AnyType> k1 = k2.left;
+        k2.left = k1.right;
+        k1.right  = k2;
+        return k1;
+    }
+    /*
+     * Rotate binary tree node with right child
+     * For AVL trees, this is a single rotation for case 1.
+     */
+    public BinaryNode<AnyType> rotateRightChild( BinaryNode<AnyType> k2){
+        BinaryNode<AnyType> k1 = k2.right;
+        k2.right = k1.left;
+        k1.left = k2;
+        return k1;
     }
 }

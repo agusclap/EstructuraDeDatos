@@ -1,6 +1,6 @@
 package ArbolBinario;
 
-
+//This class is useless, is all in BinarySearchTree
 
 public class BinaryTree<AnyType> {
     
